@@ -1,17 +1,10 @@
 const products = [
-  new Product(1, 'Monitor', 100),
-  new Product(2, 'Teclado', 200),
-  new Product(3, 'Monitor', 100),
-  new Product(4, 'Teclado', 200),
-  new Product(5, 'Monitor', 100),
-  new Product(6, 'Teclado', 200),
-  new Product(7, 'Monitor', 100),
-  new Product(8, 'Teclado', 200),
-  new Product(9, 'Monitor', 100),
-  new Product(10, 'Teclado', 200),
-  new Product(11, 'Monitor', 100),
-  new Product(12, 'Teclado', 200),
-  new Product(13, 'Mouse', 300)
+  new Product(1, 'Monitor Samsung Q65', 150000),
+  new Product(2, 'Teclado Razer', 20000),
+  new Product(3, 'Headset NogaNet', 15000),
+  new Product(4, 'Mouse RedDragon', 12000),
+  new Product(5, 'Placa de Video NVIDIA', 450000),
+
 ];
 
 const shoppingCart = new ShoppingCart();

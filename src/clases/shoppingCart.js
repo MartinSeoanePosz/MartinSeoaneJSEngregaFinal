@@ -14,11 +14,11 @@ class ShoppingCart {
     this.saveCart();
     this.renderCart();
   }
-
+// carrito guardado en local storage
   saveCart() {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
-
+// funcion items para comprar
   renderProducts(products) {
     const productContainer = document.getElementById('product-container');
     productContainer.innerHTML = '';
@@ -31,26 +31,13 @@ class ShoppingCart {
         <p>$${product.price}</p>
         <button class="btn btn-outline-primary" onclick="shoppingCart.addProduct(${product.id}, products)">Add to Cart</button>
       `;
-    //   const productElem = document.createElement('div');
-    //   productElem.className = 'product';
-    //   productElem.innerHTML = `
-    //   <div class="card" style="width: 18rem;">
-    //   <img src="..." class="card-img-top" alt="...">
-    //   <div class="card-body">
-    //     <h5 class="${product.name}">Card title</h5>
-    //     <p class="card-text">$${product.price}</p>
-    //     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    //     <a href="#" class="btn btn-info" onclick="shoppingCart.addProduct(${product.id}, products)"> Add to Cart</a>
-    //   </div>
-    // </div>
-    //   `;
 
       productContainer.appendChild(productElem);
     }
     this.renderCart();
 
   }
-
+// funcion items en el carrito
   renderCart() {
     const cartContainer = document.getElementById('cart-container');
     cartContainer.innerHTML = '';

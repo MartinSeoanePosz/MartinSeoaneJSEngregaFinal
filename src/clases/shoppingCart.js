@@ -27,6 +27,7 @@ class ShoppingCart {
       const productElem = document.createElement('div');
       productElem.className = 'product';
       productElem.innerHTML = `
+        <img src="./img/${product.img}" alt="" width="80" height="80" >
         <h2>${product.name}</h2>
         <p>$${product.price}</p>
         <button class="btn btn-outline-primary" onclick="shoppingCart.addProduct(${product.id}, products)">Add to Cart</button>
@@ -47,6 +48,7 @@ class ShoppingCart {
       const cartItemElem = document.createElement('div');
       cartItemElem.className = 'cart-item';
       cartItemElem.innerHTML = `
+      <img src="./img/${item.img}" alt="" width="100" height="100" >
         <h2>${item.name}</h2>
         <p>$${item.price}</p>
         <button class="btn btn-outline-danger" onclick="shoppingCart.removeProduct(${i})">Remove</button>

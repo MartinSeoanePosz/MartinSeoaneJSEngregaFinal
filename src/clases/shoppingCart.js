@@ -26,11 +26,12 @@ class ShoppingCart {
     for (let product of products) {
       const productElem = document.createElement('div');
       productElem.className = 'product';
-      productElem.innerHTML = `
+      productElem.innerHTML = `<div>
         <img src="./img/${product.img}" alt="" width="80" height="80" >
         <h2>${product.name}</h2>
         <p>$${product.price}</p>
-        <button class="btn btn-outline-primary" onclick="shoppingCart.addProduct(${product.id}, products)">Add to Cart</button>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end"><button class="btn btn-outline-primary me-md-2" onclick="shoppingCart.addProduct(${product.id}, products)">Add to Cart</button></div>
+        </div>
       `;
 
       productContainer.appendChild(productElem);

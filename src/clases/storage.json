@@ -1,0 +1,51 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"Monitor S Q65",
+            "price": 150000,
+            "img": "monitor.png"
+        },
+        {
+            "id":2,
+            "name":"Teclado Razer",
+            "price": 20000,
+            "img": "teclado.png"
+        },
+        {
+            "id":3,
+            "name":"Headset Noganet",
+            "price": 15000,
+            "img": "headset.png"
+        },
+        {
+            "id":4,
+            "name":"Mouse RedDragon",
+            "price": 12000,
+            "img": "mouse.jpg"
+        },
+        {
+            "id":5,
+            "name":"Placa de video NVIDIA",
+            "price": 450000,
+            "img": "NVIDIA.png"
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    ]
+
+
+
+
+
+}

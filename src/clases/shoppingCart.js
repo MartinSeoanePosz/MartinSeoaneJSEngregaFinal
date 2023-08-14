@@ -2,12 +2,17 @@ class ShoppingCart {
   constructor() {
     this.cart = JSON.parse(localStorage.getItem('cart')) || [];  }
 
-  addProduct(productId, products) {
+  start(){
+    fetch( url )
+
+        .then( respuesta => respuesta.json())
+  }
+    addProduct(productId, products) {
     const product = products.find(product => product.id === productId);
     this.cart.push(product);
     this.saveCart();
     this.renderCart();
-  }
+  } 
 
   removeProduct(index) {
     this.cart.splice(index, 1);
@@ -58,4 +63,6 @@ class ShoppingCart {
       cartContainer.appendChild(cartItemElem);
     }
   }
+
+
 }

@@ -6,6 +6,10 @@ class ShoppingCart {
     fetch( url )
 
         .then( respuesta => respuesta.json())
+        .then( resultado => {
+
+          products     = resultado.products;
+        })
   }
     addProduct(productId, products) {
     const product = products.find(product => product.id === productId);
@@ -18,8 +22,9 @@ class ShoppingCart {
     this.cart.splice(index, 1);
     this.saveCart();
     this.renderCart();
-  }
-// carrito guardado en local storage
+   }
+
+ // carrito guardado en local storage
   saveCart() {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
@@ -63,6 +68,6 @@ class ShoppingCart {
       cartContainer.appendChild(cartItemElem);
     }
   }
-
+  
 
 }

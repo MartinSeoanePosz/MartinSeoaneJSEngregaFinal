@@ -24,3 +24,6 @@ body {
   h2{
     padding-left: 5%;
   }
+  .colored-toast.swal2-icon-success {
+    background-color: #edf2ea !important;
+  }

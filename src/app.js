@@ -6,7 +6,11 @@
 //    new Product(5, 'Placa de Video NVIDIA', 450000, "NVIDIA.png"),
   
 // ];
-const url = "./src/clases/storage.json";
+let products = [];
 const shoppingCart = new ShoppingCart();
-shoppingCart.renderProducts(products);
-shoppingCart.start();
+fetch( productsUrl )
+    .then( response => response.json())
+    .then( data => {
+      products = data.products;
+      shoppingCart.renderProducts(products);
+    });
